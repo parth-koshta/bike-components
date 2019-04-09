@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 export class BikeImage extends Component {
   render() {
@@ -10,4 +11,8 @@ export class BikeImage extends Component {
   }
 }
 
-export default BikeImage
+BikeImage.propTypes = {
+  imgUrl: propTypes.string.isRequired
+}
+
+export default BikeImage;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import CardBody from './CardBody';
+import ButtonB from './ButtonB';
 
 import GoogleFontLoader from 'react-google-font-loader';
 
@@ -37,16 +38,23 @@ export class BikeCard extends Component {
     )
   }
 
+  
+
   render() {
     return this.props.bikes.map(bike => (
      
       
-      <div className="card rounded-0" key={bike.id} style={this.setCardStyle()}>
+      <div className="card rounded-0" key={bike.id.toString()} style={this.setCardStyle()}>
 
-       {/* For adding google font */}
-       {this.getFont()}
+          {/* For adding google font */}
+          {this.getFont()}
+            
+          <CardBody bike={bike}/>
+          <ButtonB
+                label='Full Specs'
+                
+          />
 
-      <CardBody bike={bike}/>
       </div>
     ));
   }

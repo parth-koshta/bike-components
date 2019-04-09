@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import propTypes from 'prop-types';
 export class BrandHead extends Component {
 
 setStyle = () => {
@@ -19,5 +19,7 @@ setStyle = () => {
   }
 }
 
-
+BrandHead.propTypes = {
+  label: propTypes.string.isRequired
+}
 export default BrandHead;

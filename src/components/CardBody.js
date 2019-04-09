@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BikeColors from './BikeColors';
 import BrandHead from './BrandHead';
 import BikeImage from './BikeImage';
-import Button from './Button';
 import propTypes from 'prop-types';
 
 
@@ -38,9 +37,7 @@ export class CardBody extends Component {
             <hr />    
             <p>In Stock: {this.getQuantity()}</p>
             </div> 
-            <Button
-            label='Full Specs'
-            />
+            
       </div>
     )
   }

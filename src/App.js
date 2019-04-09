@@ -5,8 +5,8 @@ import BikeCard from './components/BikeCard';
 
 
 
-
 class App extends Component {
+  
 
   state = {
     bikes: [
@@ -67,16 +67,17 @@ class App extends Component {
     ]
   }
 
-  
 
-  render() {
+  render(){
     
     return (
 
       <div className="App">
-      
-        <Header />
-        <BikeCard bikes={this.state.bikes}  style={{ fontFamily: 'Roboto Mono, monospaced' }}/>
+        <Header 
+        title='Bike Stock'
+        />
+        <BikeCard bikes={this.state.bikes} style={{ fontFamily: 'Roboto Mono, monospaced' }}/>
+        
         
       </div>
     );
